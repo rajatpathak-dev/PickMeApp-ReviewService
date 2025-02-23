@@ -18,23 +18,14 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Review {
+public class Review extends BaseModel {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-   private Long id;
+
 
    @Column(nullable = false)
    private String content;
    private Double rating;
 
 
-    @Column(nullable = false)
-    @CreationTimestamp
-    private LocalDateTime createAt;
 
-
-    @Column(nullable = false)
-    @UpdateTimestamp
-    private LocalDateTime updatedAt;
 }
