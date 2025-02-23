@@ -15,14 +15,14 @@ import java.time.LocalDateTime;
 public abstract class BaseModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    protected Long id;
+    private Long id;
 
     @Column(nullable = false)
     @CreationTimestamp
-    protected LocalDateTime createAt;
+    private LocalDateTime createAt;
 
 
     @Column(nullable = false)
     @UpdateTimestamp
-    protected LocalDateTime updatedAt;
+    private LocalDateTime updatedAt;
 }
