@@ -6,10 +6,10 @@ import lombok.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Getter
 @Setter
 @Builder
 @NoArgsConstructor
+@Getter
 @AllArgsConstructor
 public class Booking extends  BaseModel{
 
@@ -17,7 +17,7 @@ public class Booking extends  BaseModel{
     @JoinColumn(name = "review_id")
     private Review review;
 
-    @Enumerated(EnumType.STRING)
+    @Enumerated(value = EnumType.STRING)
     private BookingStatus bookingStatus;
     private LocalDateTime start;
     private LocalDateTime end;
