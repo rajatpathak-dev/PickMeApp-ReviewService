@@ -13,9 +13,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class Booking extends  BaseModel{
 
-    @OneToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
-    @JoinColumn(name = "review_id")
-    private Review review;
+
 
     @Enumerated(value = EnumType.STRING)
     private BookingStatus bookingStatus;
