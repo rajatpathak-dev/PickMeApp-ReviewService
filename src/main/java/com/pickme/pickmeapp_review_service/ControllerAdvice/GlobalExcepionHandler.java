@@ -1,5 +1,6 @@
 package com.pickme.pickmeapp_review_service.ControllerAdvice;
 
+import com.pickme.pickmeapp_review_service.exception.BookingNotFoundException;
 import com.pickme.pickmeapp_review_service.exception.ReviewNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +13,11 @@ public class GlobalExcepionHandler {
     @ExceptionHandler(ReviewNotFoundException.class)
     public ResponseEntity<?> handleReviewNotFoundException(ReviewNotFoundException reviewNotFoundException){
         return new ResponseEntity<>(reviewNotFoundException.getMessage(), HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(BookingNotFoundException.class)
+    public ResponseEntity<?> handleBookingNotFoundException(BookingNotFoundException bookingNotFoundException){
+        return new ResponseEntity<>(bookingNotFoundException.getMessage(), HttpStatus.NOT_FOUND);
     }
 
 }
