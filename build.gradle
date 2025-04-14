@@ -34,7 +34,9 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-    implementation 'com.pickme:PickMeApp-EntityService:0.0.2-SNAPSHOT'
+    implementation 'com.pickme:PickMeApp-EntityService:0.0.5-SNAPSHOT'
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:4.2.0'
+
 }
 
 tasks.named('test') {
